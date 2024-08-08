@@ -1,0 +1,22 @@
+Start with Basics
+1. Syntax
+2. Datatypes
+3. Variables
+4. Operator
+5. Loops and conditional
+
+Basic to intermediate
+1. Functions
+2. Arrays
+3. Objects
+4. Events
+5. DOM Node
+
+intemediate to advance
+1. promises
+2. Callbacks
+3. Async-Await
+4. Error-Handling
+5. OOPS
+6. Asynchronous Javascript
+7. JavaScript Modules

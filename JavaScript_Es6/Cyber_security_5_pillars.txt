@@ -1,0 +1,6 @@
+There are 5 pillars of cyber security
+1. General computing
+2. computer networking
+3. programming and scripting
+4. windows
+5 linux

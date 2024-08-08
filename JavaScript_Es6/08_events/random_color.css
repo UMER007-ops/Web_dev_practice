@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(24, 23, 23);
+    color: white;
+}
+.container{
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    /* border: 2px solid black; */
+}
+nav{
+    height: 30px;
+    width: 500px;
+    border: 2px solid black;
+    padding: 25px 30px 15px 15px;
+    border-radius: 15px;
+}
+a{
+    margin: 20px 10px;   
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+button{
+    margin: 20px 10px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+

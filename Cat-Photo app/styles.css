@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+.container{
+    /* border: 2px solid black; */
+    min-width: 200px;
+    max-width: 1100px;
+    margin: 2px auto;
+}
+h1,.main-heading,.cat-list,.cat-form h2,footer{
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
+
+fieldset{
+    width: 70%;
+    margin: 10px auto;
+}
+
+#URL{
+    display: block;
+    width: 50%;    
+    margin: 2px auto;
+}
+button{
+    display: block;
+    width: 20%;
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.cat-love{
+    /* border: 2px solid black; */
+    float: left;
+    margin-left: 130px;
+}
+.cat-hate{
+    /* border: 2px solid black; */
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+.cat-form{
+    clear: both;
+}

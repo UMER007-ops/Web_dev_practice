@@ -1,0 +1,38 @@
+.canvas{
+    height: 550px;
+    width: 800px;
+    border: 2px solid black;
+    margin: auto auto;
+    padding-top: 30px;
+}
+.buttons{
+    margin-left: 20%;
+}
+#grey{
+    background-color: grey;
+}
+#white{
+    background-color: white;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+.button{
+    margin: auto 0;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+h1{
+    margin-left: 27%;
+}
+h2{
+    margin-left: 20%;
+}
+h2 span{
+    display: block;
+}

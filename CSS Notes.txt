@@ -1,0 +1,1742 @@
+Outline and Border:
+
+There are 9 types of border and outline of the border which are as follows.
+1. solid
+2. dotted
+3. dashed
+4. double
+5. groove
+6. ridge
+7. inset
+8. outset
+9. none
+. border:3px solid red;
+. outline:2px solid green;
+
+. Outline-offset: 2px; This give a gap of 2px between the border and the outline.
+
+. Padding is a property that gives a space from the inside of the container.
+
+. To center a div we always need to give it width.
+width: 500px;
+margin: 20px auto;
+now its a margin of 20px from top and bottom and auto from left and right. 
+
+
+                                         . BOX-SIZING
+It has two values.
+.Border-box and Content-box
+
+If we give border and padding to an element it will increase its width but to keep it at 
+the original width we give box-sizing property as border box
+Example
+
+width: 500px;
+border: 20px solid black;
+padding: 50px;
+box-sizing: border-box;
+
+box-sizing will keep the width to 500px and not let it increase.
+
+					
+					. Overflow
+It have 4 values
+. overflow: hidden;   // It hide the overflown data
+. overflow: Scroll;   // A scroll bar appear 
+. overflow: auto;     // A vertical or horizontal scroll bar appears according to overflow
+. overflow: Visible;  // this is default the overflown data is normally visible
+
+if we want to tacle overflow on x or y axis we use
+ 
+. overflow-x          // This is in case of images text data increase in y axis 
+. overflow-y 
+
+
+					. Border Radius Properties
+It has 4 properties
+. border-top-left-radius
+. border-top-right-radius
+. border-bottom-right-radius
+. border-bottom-left-radius
+
+shortHand
+Border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;
+Border-radius: 20px 30px 50px 10px;
+Border-radius: 10px 30px;  // Opprosite corners are given the same border;     
+border-radius: 30px;       // This give 30px border to all sides
+border-radius: 50%;        // Border-radius can also be given in percentage. 50% will make 
+			      an ovel shape
+
+				. Making a circle using border-radius
+div{
+   height: 150px;
+   width: 150px;
+   border: 2px solid red;
+   border-radius: 50%;       // Note that height and width are equal and we give 
+				border-radius of 50% so it makes a circle
+   }
+
+					. Box-Shadow
+
+box-shadow: horizontal-offset vertical-offset blur spread color;
+box-shadow: 2px 2px 5px 10px orange;
+
+horizontal-offset = x-axis
+vertical-offset = y-axis
+blur = how much the shadow should be blur
+spread = how much the shadow should be spread
+color = what should be color of the shadow
+blur spread and color are optional doesn't matter we give it or not. It will take default 
+values 0 for blur and spread and black for color.
+
+if we give
+box-shadow: -2px 2px 5px orange;
+-ve sign will take the shadow to left side of the box
+
+box-shadow: -2px -2px 5px orange;
+-ve signs will take the shadow to left and top of the box
+
+	we can alse give multiple shadows using box shadow
+box-shadow: 6px 6px 3px red,12px 12px 3px green,18px 18px 3px blue;
+
+	we can also give shadow on inside of the box
+box-shadow: 6px 6px 3px 10px red inset;   // It will place the shadow inside
+
+
+					. Float  (very important)
+Float have only 2 values left and right
+float: left;
+float: right;
+ 
+					. Clear (property) (most impotant)
+clear property is used to clear the content that is coming over the content of another div
+below it. the divs maybe given properties of float left or right. we normally use clear 
+both which handle both the float left and right cases.
+It has 3 values
+clear: left;    // this one is used so that a div with float left property do not come over
+                 the content of another div below it.
+clear: right;  // this one is used so that a div with float right property do not come over
+                 the content of another div below it.
+clear: both;   // normally this one is used
+
+
+					CSS Font Properties
+. Font-size        (size of the font)
+. Font-family      (family of the font)
+. Font-weight      (how bold the font should be)
+. Font-style	   (style of the font)
+. Font-varient     
+. Line-height      (height between the lines)
+
+
+				   .  Font-size predefine values
+.  xtra xtra-small
+.  xtra-small
+.  small
+.  smaller
+.  medium
+.  large
+.  xtra-large
+.  xtra xtra-large
+
+                                   .  Font-size user defined
+.  Pixel
+   Font-size: 15px;
+
+.  Percentage
+   Font-size: 100%;
+
+.  Em
+   Font-size: 1em;
+
+
+					Font-Family
+Font-family: arial;
+
+Font-family: arial,Helvetica,verdana;  // It will take arial if not available than Helvetica
+					  if this also not avilable than verdana
+
+
+					Font-weight
+.  font-weight: bold;
+.  font-weight: normal;   // Default value
+.  font-weight: bolder;   // Make the font slightly bolder than parent
+.  font-weight: lighter;  // Make the font slightly lighter than parent
+.  font-weight: 400;      // This can also be a value
+
+
+
+					Font-style
+.  font-style: italic; 
+.  font-style: oblique;   // if a font-family don't have italic style than oblique work as
+			     italic
+
+
+					Font-varient
+.  font-varient: small-caps;  // first letter of a para will be catilazied and the first 
+				 letter will be a little more capitalized
+
+
+                                 Shorthand for all of the above
+
+
+.  font: font-style font-varient font-weight font-size/line-height font-family;
+.  font: oblique     small-caps     normal       1em / 35px        arial,Helvetica,verdana;
+   
+
+					CSS Text Properties
+
+.  Text-align
+.  Text-align-last
+.  Text-transform
+.  Text-indent
+.  Word-spacing
+.  Letter-spacing
+
+					. text-align
+.  text-align: left;          // default value
+.  text-align: right;         // align the text right
+.  text-align: center;        // center the text
+.  text-align: justify;       // Equal from left and right
+.  text-align-last: right;    // align the last line to right
+.  text-align-last: center;   // align the last line to center
+.  text-align-last: start;    // align the last line to left
+.  text-align-last: last;     // align the last line to right if text-align is also right
+.  text-align-last: auto;     // align the last line according to the value of text-align
+
+
+					. Text-transform
+.  text-transform: uppercase;   // to uppercase the letters
+.  text-transform: uppercase;   // to lowercase the letters
+.  text-transform: capitalize;  // to capitalize the first letters of every word
+.  text-transform: none;        // default value
+
+					. Text-indent
+.  text-indent: 50px;           // to move the text 50px from start
+
+					. word-spacing
+.  word-spacing: 50px;          // This gives a 50px space between words
+
+					. letter-spacing
+.  letter-spacing: 10px;        // This gives a 10px space between each letter in every word
+
+
+
+					 . Text-Decoration properties
+   text-decoration-line
+It has four properties
+.  underline         // makes a line under the text 
+.  overline	     // makes a line above the text
+.  line-through	     // makes a line on the text
+.  none		     // default value
+
+.  text-decoration-color
+Any color can be used here. defines color of the line
+
+.  text-decoration-style
+It has 5 values
+.  solid        // solid line
+.  dotted	// dotted line
+.  dashed	// dashed line
+.  double	// double line
+.  wavy		// wave shape line
+
+example
+text-decoration-line: underline;
+text-decoration-color: red;			
+text-decoration-style: wavy;
+
+shorthand for the above
+text-decoration: underline red wavy;
+
+
+					word-wrap
+word-wrap: break-word;             // breaks a long word that is going out of the width of 
+				      div. so that it appears on next line
+word-wrap: normal;                 // default value 
+
+					word-break
+word-break:break-all;		   // it breaks a word so that some of it appears in next 
+				      line and do not go out of div width.
+word-break:keep-all;               // default-value
+
+
+					Text-Shadow
+text-shadow: horizontal-shadow vertical-shadow blur-radius color;      // we can give negative and positive values for horizontal and vertical shadows negative value 
+									  of horizontal shadow will take the shadow to right and negative value of vertical shadow will
+									  take it to left.
+
+text-shadow:      2px              2px           5px       orange;     // Every letter will have a shadow.
+
+text-shadow:      2px 2px 5px orange,4px 4px 1px green;                // for multiple shadows
+
+
+					White-Space Values
+white-space: nowrap;               // nowrap means text will appear in one line only and it overflows out of the div.  so we can use overflow: hidden; for it.
+white-space: pre;                  // pre means text appears in the same way as given in div if we want to keep the text in one line like (nowrap) line that 
+				      will also work.
+white-space: pre-line;             // It works same as pre but the only difference is that it count only one space between words no matter how much spaces we have given.  
+white-space: pre-wrap;             // It works same as pre but the only thing is (nowrap) do not work in this which means all the text cannot be shown in one line.
+white-space: normal;               // default value
+
+
+					Text-overflow values 
+text-overflow: ellipsis;           // this will give ... at the end if white-space: nowrap; and overflow: hidden; are used so the text looks descent
+text-overflow: "[..]" (string);    // this will give [..] at the end if white-spce: nowrap; and overflow: hidden; are used so the text looks descent
+text-overflow: clip;		   // default value
+
+
+					Writing mode values
+writing-mode: vertical-rl;         // rotate text vertical right to left width of div remains same
+writing-mode: vertical-lr;         // rotate text vertical left to right width of div remains same
+writing-mode: sideways-rl;         // do practically  
+writing-mode: sideways-lr;         // do practically
+writing-mode: horizontal-tb;       // default
+
+
+					Column-count
+column-count: 3;                   // breaks the text into multiple columns like those in magazines and newspapers.
+column-gap: 50px;                  // There will be 50px gap between the 3 columns.
+column-rule-width: 2px;            // There will be a 2px vertical line between the columns
+column-rule-style: solid;          // The line will be solid. It can also be dashed,dotted etc.
+column-rule-color: red;            // this will give red color to line
+
+				   shorthand for column rule
+column-rule: 5px dotted red;
+
+column-width: 250px;               // while using width we don't need column count as it will make as much columns of the given width as possible
+
+column-span: all;                  // this is to take a heading out of the column so that it appears as a heading above the columns partitions.
+
+url (uniform resource locator)
+
+
+					@font-face
+First download the font from the resource. This allows a visitor to see the same font in webpage if the webpage is not installed in his system
+@font-face{
+	font-family: openSans;
+	src: url(fonts/openSans-Regular-webfont.eot),
+	     url(fonts/openSans-Regular-webfont.woff);
+}  
+
+h1{
+	font-family: openSans;         // this is how we use it
+}
+
+
+					CSS List Style Properties
+					      list-style-type
+All the properties of list style are used wit ol and ul only not with li
+The properties used in ul are as follows
+
+list-style-type: circle;
+list-style-type: square;
+list-style-type: disc;                   // default
+list-style-type: none;                   // used in both ol and ul
+
+
+The properties used in ol are as follows
+list-style-type: upper-alpha;		  // A,B,C etc uppercase alphabets
+list-style-type: lower-alpha;		  // a,b,c etc lowercase alphabets
+list-style-type: upper-roman;             // uppercase roman counting
+list-style-type: lower-roman;             // lowercase roman counting
+list-style-type: decimal;                 // default value
+list-style-type: none;
+
+
+					      list-style-position					
+list-style-position: inside;              // moves the elements a bit forward
+list-style-position: outside;             // moves the elements a bit backward
+
+
+						
+						list-style-image
+list-style-image: url(path of the image);
+
+
+
+
+					   shorthand for list styles
+
+list-style: list-style-type list-style-position list-style-image;
+list-style:    none               inside        url(path of the image);
+
+
+					CSS background image basic properties 
+background-image: url(imagepath),url(imagepath) etc;
+
+					     css background repeat values
+					we can use a comma(,) to set the property for two or more images
+background-repeat:repeat;                          // default value  
+background-repeat:no-repeat;			   // image will not repeat 
+background-repeat:repeat-x;			   // image repeat on x-axes
+background-repeat:repeat-y;			   // image repeat on y-axes
+background-repeat:space;			   // image repeat on x-axes and y-axes with spaces			   
+background-repeat:round;			   // image repeat on x and y axes but streched
+
+
+					css background-position values
+					we can use a comma(,) to set the property for two or more images					
+background-position: x-value y-value;
+background-position: left    top;
+background-position: left    center;
+background-position: left    bottom;
+background-position: right    top;
+background-position: right    center;									
+background-position: center   top;
+background-position: center   center;
+background-position: center   bottom;
+background-position: x-percentage(%) y-percentage(%);
+
+					background color
+
+background-color: color;
+
+					Shorthand for background
+
+background: background-color url(imagePath) background-repeat background-position;
+
+
+					background-attachment
+
+background-attachment: fixed;           // it will fix the background image
+background-attachment: scroll;          // default value
+
+
+					css background size values 
+background-size: 150px;           // x and y axes both will be 150px
+background-size: 150px 300px;     // x is 150px and y will be 300px
+background-size: 50%;		  // x and y axes both will be 50%
+background-size: 40% 20%;	  // x is 40% and y will be 20%
+background-size: cover;		  // will cover the whole container in containing the image as background
+background-size: contain;	  // the image tries to adjust itself in the container but it may not take the whole width and height of the container
+background-size: auto;            // default value
+
+
+					// Background-Origin
+// Background origin tells that on which position the background image should be displayed
+
+background-origin: content-box;       // image is displayed from the point where the content of the container starts
+background-origin: padding-box;       // image is displayed from the point where the padding of the container starts. use dotted border to understand this.
+background-origin: border-box;        // image is displayed from the point where the border of the container starts. use dotted border to understand this.
+
+
+					// background-clip
+background-clip: content-box;       // background is displayed behind the content of the container
+background-clip: padding-box;       // background is displayed behind the point from where padding of the container starts. remember containers have some default padding
+background-clip: border-box;        // background is displayed behind the point from where border of the container starts. default value
+background-clip: text;              // use this with color: tranparent; the image will look at the background of the text
+
+
+					// Background-colors
+colors with name
+color: name-of-color;
+
+colors whith rgba
+color: rgb();
+color:rgba();
+
+colors with hex code
+color: #ff0000(red-color);
+
+colors with hsl(hue,saturation,lightness)     // hue is a degree from 0 to 360 where 0 means red 120 means green and 240 means blue. saturation means intensity of the 
+						 color that how much the color should be bright or dull It is between 0-100%. lightness means how much whitish the color
+						 should be it is between 0-100%. 
+color: hsl();
+color: hsla();                                // here a represent alpha which is the opacity of the color. its value is between 0-1. 0 means the color should be 
+					         transparent. 1 means full color.
+
+
+					// Different CSS Gradient Types
+To create the most basic type of gradient, all you need is to specify two colors. These are called color stops. You must have at least two, but you can have as many 
+as you want.
+. Linear Gradient
+	background: linear-gradient(red,yellow);		   // Top to Bottom (Default direction)   
+	background: linear-gradient(to right,red,yellow);	   // Left to right
+	background: linear-gradient(to left,red,yellow);           // Right to left
+	background: linear-gradient(to top,red,yellow);		   // Bottom to top
+	background: linear-gradient(to bottom right,red,yellow);   // we can make combinations like this
+	background: linear-gradient(45deg,red,yellow);             // we can give degrees too
+	background: linear-gradient(-45deg,red,yellow,green);	   // we can give degrees in neg(-) . we can give more than two colors as well
+	background: linear-gradient(red,rgba(255,0,0,0,0.5))
+. Radial Gradient
+	background: radial-gradient(red 5%,yellow 15%,green 60%)	    			  // Center (Default shape ellipse)
+	background: radial-gradient(circle,red 5%,yellow 15%,green 60%)     			  // we can also define shapes
+	background: radial-gradient(closest-side at 90% 20%,red 5%,yellow 15%,green 60%)          // This will take the center colors closer to 90% on x-axes and 20% at y-axes
+	background: radial-gradient(farthest-side at 90% 20%,red 5%,yellow 15%,green 60%)         // This will spread  the center 90% on x-axes and 20% at y-axes
+	background: radial-gradient(closest-corner at 5% 10%,red 5%,yellow 15%,green 60%)         // This will take the center colors 5% on x-axes and 10% at y-axes
+	background: radial-gradient(farthest-corner at 5% 10%,red 5%,yellow 15%,green 60%)         // This will spread the center colors 5% on x-axes and 10% at y-axes
+	// we can use the below in radial gradient as well.
+	Right Bottom  
+	Left Bottom
+	Left Top
+. Repeating Linear Gradient
+	background: repeating-linear-gradient(to right,red,yellow 10%,green 20%);
+. Repeating Radial Gradient
+	background: repeating-radial-gradient(red,yellow 10%,green 15%);
+	background: repeating-radial-gradient(circle,red,yellow 10%,green 15%);
+
+
+						opacity
+opacity: 0.5;     // if given to a div everything in the div will be traansparent
+
+another way to do this
+filter:alpha(opacity=50)
+
+rgba is the advance version of the above It just change the opacity of the background color not the whole content
+
+					
+					CSS Background-Blend-Mode
+It has 16 different values see on goolge
+
+background-image: linear-gradient(to right,red,yellow), url('images/flower.jpg);
+background-blend-mode: screen;  // image seen in background with the color given as background color
+
+its values can be overlay,hue,saturation,normal(default value) etc etc .
+
+
+					CSS Mix blend mode
+mix-blend-mode: screen;
+its values can be overlay,hue,saturation,normal(default value) etc etc . It has values same as css background-blend-mode
+This can be used for other things like headings,images.
+something must be there in the background to use the above two properties.
+
+
+					CSS Display
+In HTML, elements are categorized as either block-level or inline-level by default. Block-level elements typically start on a new line and take up the full width 
+available, while inline-level elements do not start on a new line and only take up as much width as necessary. Here are some common HTML elements and their default 
+display behavior:
+
+Common Inline Elements:
+
+<span>
+<a> (anchor)
+<strong> and <em> (text emphasis)
+<img> (image)
+<abbr> (abbreviation)
+<br> (line break)
+<code> (code)
+<time> (time)
+
+Common Block Elements:
+
+<div>
+<p> (paragraph)
+<h1>, <h2>, ..., <h6> (headings)
+<ul>, <ol>, <li> (lists)
+<table>, <tr>, <td> (table elements)
+<form>, <input>, <button> (form elements)
+<blockquote> (block quotation)
+<hr> (horizontal rule)
+Keep in mind that the default display behavior can be modified using CSS. For example, you can use the display property to change a block-level element to behave like 
+an inline-level element, or vice versa.
+
+
+
+. none                  // The content of the tag on which display:none; is applied will be invisible but it will still be there
+. inline		// The display: inline; CSS property is used to define an element as an inline-level element. Inline elements do not start on a new line and 
+			   only take up as much width as necessary, allowing other elements to sit beside them.
+. block			// if we use display: block; on a span it will get the power of div and take up the whole width available. We can also give it the width we 
+			   wish like div.			   
+. inline-block 		// It means elements still remain inline but the properties of block(div) elments like width,etc work on them
+. list-item		// display: list-item;  it gives element all the properties/powers of li
+. flex
+. grid
+. inline-flex
+. inline-grid
+etc etc
+
+
+						CSS visibility
+values
+.  visible		// visibility: visible; if we want to hover mouse and make something visible
+.  hidden		// visibility: hidden; it means that it will not leave its place but just disappear
+.  collapse		// one row will be collapsed from the middle. if we use visibility:collapse; on a td its data will become invisible
+
+
+									CSS Position Values
+.  Static
+.  Relative             // position: relative; and left: 100px; top: 100px;  
+.  Absolute		// position: absolute; In CSS (Cascading Style Sheets), the position: absolute; property is used to position an element in relation to its 
+			   closest positioned ancestor or the initial containing block. When an element is set to position: absolute;, it is taken out of the normal 
+			   document flow, meaning it does not affect the positioning of other elements on the page. The elment will move up on scrolling page
+			   we have to give position: relative; to the parent only then position absolute will work in the child or else position absolute will work 
+			   relative to the body.  We have to make the parent relative first.
+			   example
+			   #absoluteDiv {
+         			position: absolute;
+  				top: 50px;
+  				left: 100px;
+				}
+.  Fixed		// position: fixed; this mean the element will be fixed on a particular position. that element will not move on scrolling.
+			   example
+			   position: fixed;
+			   top: 50px;
+  			   left: 100px;
+.  Sticky		// position: sticky; this mean the element will be fixed on a particular position. that element will not move on scrolling. he element is 
+                           positioned based on the user's scroll position. It acts like relative positioning until the element reaches a certain point during scrolling,
+			   at which it becomes fixed.
+			   example
+			   position: sticky;
+			   top: 50px;
+  			   left: 100px;
+
+
+								Necessary Css property with position
+
+.  Left
+.  Right
+
+// can use any one from the above and any one from the below
+
+.  Top
+.  Bottom
+
+
+									Z-Index
+z-index depend on position. It is the z-axis. If we want one element on top of others we will make its z-index: 1; if we want it below all the others we give it 
+z-index: -1; . z-index values can be 2 3 etc. element having higher value will be on top of one having lower value and element having highest value of z-index will be
+on top of all.
+							
+								CSS Media Types (Media queries)
+.  All
+.  Print		// how it should look if someone print something
+.  Screen		// what should be css on different screens
+
+
+.  Speech               // how it should work in speech if someone want to listen what content is written
+
+								
+								Sizes Different viewports
+.  1920
+.  1440
+.  1366
+.  1024
+.  700-900               // for tablets
+.  320-480		 // for mobiles
+
+@media screen and (max-width: 900px;){}   // syntax for media query max-width: 900px; is break point
+
+								
+								CSS Media features
+There are many different conditions
+.  any-hover
+.  any-pointer
+.  color
+.  aspect-ratio
+.  grid
+.  height
+.  max-width
+.  min-width   
+etc etc etc
+
+
+we can also use two featured using logical operators as follow.
+@media screen and (max-width: 900px; and min-width: 700px;){}
+@media screen and (only max-width: 500px;){}      // it will trigger only when width is 500px
+@media screen and (not max-width: 480px;){}	  // this will trigger on all widths except for 480px
+
+
+							// CSS Table Properties
+.  border-spacing
+.  border-collapse
+.  vertical-align
+.  caption-side
+.  empty-cells
+.  table-layout
+
+
+							// CSS table properties
+tr = table row
+th = table heading
+td = table data
+<table>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+border-spacing: 10px;           // it gives 10px of gap between rows and columns
+border-spacing: 10px 20px;      // 10px spacing between columns and 20px space between rows
+
+border-collapse: separate;	// every td have border. (separate is a default value). td tr and table have their wn borders
+border-collapse: collapse;      // only one border is left there is no seperate border on tr and td
+
+verticle-align: top;            // if given to td this will take the data in td to top
+verticle-align: middle;            // if given to td this will take the data in td to middle (default value is middle)
+verticle-align: bottom;            // if given to td this will take the data in td to bottom
+
+we can also dive padding to td
+
+<caption>Employee record</caption>  // This will give a heading above the table
+
+caption-side: top;                  // This take the caption to top (default value is top)
+caption-side: bottom;		    // This take the caption to bottom
+
+empty-cell: hide;                   // This will hide the empty cell. effect can be seen only if we use border-collapse: separate;
+empty-cell: show;                   // This will show the empty cell. (Default value is show)
+
+
+table-layout: fixed;               // width of the cell will not increase if data increase. (default value is fixed)
+table-layout: auto;                // width of the cell will increase automatically if data increase and data will not overflow.
+
+tr:hover{
+	background: f2f2f2;        // color change to light gray when we hover 
+}
+
+tr:nth-child(even){                // even = 0,2,4,6,...
+	background: f2f2f2;        // color of even rows will be changed	
+}
+
+
+							// CSS Resize Values
+.  horizontal			// can be resized horizontally
+.  vertical			// can be resized vertically
+.  both				// can be resized vertically and horizontally 
+.  none                         // default value
+
+Resize property is dependant on another property called overflow
+
+overflow: auto;
+resize: vertical;		// The element can be resized vertically
+
+<text-area></textarea> "text-area" have the resize property by default.
+
+
+
+							// Cursor
+It has different 35-36 values. check them out on internet
+
+cursor: auto;                   // default
+cursor: help;                   // It gets a cursor with a question mark
+cursor: pointer; 
+cursor: wait;
+cursor: cell;
+
+
+							// CSS Units
+    	Absolute(fixed) units
+
+       Unit             Description
+
+	cm		 Centimeter
+	mm 		 Millimeter
+	in		   Inches    
+	px		   Pixels
+	pt 		   Points
+	pc		   picas
+
+
+	CSS relative units
+
+	Unit		 	Description
+
+	 em		  used for font-size. em is relative to the font-size of parent. By default 1em is 16px which is the default font-size of browser. we can 
+			  change it from settings of the browser then default em will also be changed to that font-size. we can use it for width also
+			  example, If parent is given font-size:13px; then font-size:1em; for child would mean same 13px but 2em would mean 26px. 
+ 		  
+	 rem		  Relative em. This will either take the default font-size of the browser(by default 16px but can be changed) or the root(font-size of the html
+			  tag 16px by default but can be changed).
+
+	 ch	
+	 ex
+	 vw		  Viewport width. As we shrink or expand viewport the width of the element will change accordingly
+
+	 vh		  Viewport height. As we increase or decrease the height of the viewport the height of the element will also change accordingly
+
+	 vmax		  Viewport maximum    // width:50vmax; this will take width 50% of height if height of viewport is greater than width of viewport and 50% of 
+						 width of viewport if width is greater than height of viewport.
+						 The vmax unit is useful for responsive design because it allows you to set sizes relative to the size of the viewport,
+ 						 ensuring that the element's size doesn't exceed the smaller dimension (width or height) of the viewport.
+
+					         The formula to calculate vmax is as follows:
+						 vmax=max(vw,vh)
+ 
+	 vmin		  Viewport minimum     // width: 50vmin; this work same as vmax but it just take the minimum of width and height of viewport.
+						  The formula to calculate vmin is as follows:
+						  vmin=min(vw,vh)
+
+	 %       	  Percentage  (relative unit depend on parent). increase and decrease according to parent size
+
+
+									// CSS Variables
+
+we use pseudo selector root for this.
+
+:root{                             // root variables have a global scope can be used anywhere in the website.
+	--main-color: red;
+	--head-font: impact;
+	--p-font: verdana;
+}
+.classA{
+	color: var(--main-color)
+}
+.classB{
+	background-color: var(--main-color)
+	--foot-font: 15px;             // variable with local scope
+}
+
+
+												// CALC function    
+.classA{
+	width: calc(100% - 1em);
+}
+.classB{
+	width: calc(100% / 2);
+}
+.classC{
+	background-image: url(logo.png);
+	background-position: calc(100% - 50px) calc(100% - 20px);
+}
+.classD{
+	background-color: hsl(180, calc(2*25%), 65%);
+}
+ we can use +,-,*,/ with calc.
+
+
+ Example, center a div vertically and horizontally using calc
+#box{
+	border: 1px solid black;
+	background: papayawhip;
+	width: 500px;
+	height: 300px;
+	padding: 20px;
+	position: absolute;
+	left: calc(50% - 250px - 20px - 1px);  // we have to subtract half of width which is 250px, padding, size of border from 50% of viewport to center it horizontally. 
+	top: calc(50% - 150px - 20px - 1px);   // we have to subtract half of height which is 150px, padding, size of border from 50% of viewport to center it vertically. 
+}
+
+Another example of calc
+#header{
+	background: papayawhip;
+	width: 100%;
+	height: 100px;
+}
+#content{
+	background: pink;
+	width: 100%;
+	height: calc(100vh - 200px);
+}
+#footer{
+	background: green;
+	width: 100%;
+	height: 100px;
+}
+
+
+											// CSS Clip-path
+
+										clip path is used on image,div,etc.
+
+.  circle
+
+clip-path: circle(40% at 50% 50%);   // 40% is the area of the image which is circled and 50% is the x and y-axes respectively from which circle is made
+
+.  ellipse
+
+clip-path: ellipse(40% 30% at 50% 50%);  // 40% is the horizontal radius and 30% is the vertical radius and 50% is the x and y-axes respectively
+
+.  inset
+
+clip-path: inset(5%,20%,15%,10%);             // it will give a rectangle or a square only. 5% is the top 20% is the right 15% is bottom and 10% left.
+
+.  polygon                          // It is a closed shape we have to give points of x and y-axes. We can give different points to make different shapes.
+
+clip-path: polygon(50% 0, 0% 100%, 100% 100%); these points make a triangle
+
+website:   https://bennettfeely.com/clippy/     // This website gives different css points for different shapes
+
+
+
+												// Shape-outside css property
+This property is used in text formatting. It is used with clip-path only not without it. This property is used so that text can take the empty space.
+
+img{
+	float: left;         // not necessary
+	clip-path: circle(30% at 30% 50%);        // making a circle
+	shape-outside: circle(30% at 30% 50%);	  // text take the shape of circle
+	shape-margin: 20px;                       // to give some gap between text and image
+}
+
+
+												// Filter  see video 54 (yahoo baba) on YT to learn filters
+
+		Filter are the effects on images. There are 12 different effects. we can check it on onternet
+
+
+img{
+	filter: blur(15px);                   
+}
+
+filter: brightness(100%);					  // default
+filter: brightness(50%);    				  // a bit dull
+filter: brightness(0);      				  // black
+
+
+filter: contrast(100%);      				  // default
+filter: contrast(60%);      				  // dull
+
+filter: drop-shadow(8px 8px 10px red);        // same like box-shadow
+
+filter: grayscale(0);        				  // default value
+filter: grayscale(100%);        			  // gray shadow
+
+filter: hue-rotate(200deg);			
+
+filter: invert(100%);
+
+filter: opacity(80%);					// to make the image transparent
+
+filter: saturate(200%);    
+
+filter: sepia(50%);						// sepia mode
+
+filter: none;                           // default value
+
+filter: sepia(50%) saturate(200%);      // can use more filters  
+
+
+													// Transition
+
+transition-property:  width,height,background;        // width,height,background is the elements properties on which we want to apply transition
+transition-duration:  2s,4s,2s;             // necessary for transition (here we have taken 2 second for width and 4 second for height and 2second for background)
+transition-timing-function:  ease;
+transition-delay:  2s;          // transition will be started after 2 seconds
+
+transition: transition-property transition-duration transition-timing-function transition-delay;                  // shorthand for the above 4
+transition: all 2s linear 1s;
+
+
+transition: width,height,background 2s,2s,2s;    
+
+#box{
+	width: 150px;
+	height: 150px;
+	background: pink;
+	transition: all 2s;                 // The transition will be applied on all the properties defined in the elements css for 2 second. it is helpfull when we want to apply transitions for the same time
+}
+
+#box:hover{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+transition-timing-function has different values some of them are as follows
+transition-timing-function:  ease;
+transition-timing-function:  linear;
+transition-timing-function:  easy-in;
+transition-timing-function:  easy-out;
+transition-timing-function:  easy-in-out;
+transition-timing-function:  steps(4);         // animation will be done in 4 steps
+transition-timing-function:  steps(4,start);         // animation will be done in 4 steps do experiment
+transition-timing-function:  steps(4,end);         // animation will be done in 4 steps	do experiment
+transition-timing-function:  step-start;         //	do experiment
+transition-timing-function:  step-end;         //	do experiment
+transition-timing-function:  cubic-bezier(0.1,0.7,1.0,0.1);         //	steps with smoothness
+etc etc etc
+
+
+													//  2D transform
+
+It has 12 different values
+
+transform: none;        // default value
+transform: rotate(30deg);    // text will also be rotated if present
+transform: rotate(-60deg); 
+transform: skew(120deg,30deg); 
+transform: skewX(30deg);      // rotate through x-axis
+transform: skewY(60deg); 	  // rotate through y-axis
+
+transform-origin: center center;    // by default transofmation is done from center
+
+transform-origin: left top;       // now transformation will be done through left top
+
+transform-origin can also be left bottom, right top, right bottom
+
+transform-origin: 20% 40%;       // now transformation will be done through 20% x-axes 40% y-axes
+
+transform: translate(30px,80px);	// this will translate to 30px on x-axes and 80px on y-axes
+
+transform: translateX(80px);      // translate on x-axes only
+transform: translateY(80px);      // translate on y-axes only
+
+transform: scale(2);              // scale it twice
+transform: scale(3);              // scale it thrice
+transform: scaleX(3);              // scale it thrice on x-axes
+transform: scaleY(3);              // scale it thrice on y-axes
+
+transform: matrix(scaleX(),skewY(),skewX(),scaleY(),translatex(),translateY());      // used in animations not very often in web designs 
+
+transform: rotate(30deg) scale(2) skew(30deg);
+
+
+									// CSS Transform - 3D
+
+.  rotateX(angle)
+.  rotateY(angle)
+.  rotateZ(angle)
+.  rotate3D(x,y,z,angle)
+.  translateZ(z)
+.  translate3D(x,y,z)
+.  scale3d(x,y,z)
+.  scaleZ(z)
+.  perspective(n)                                // it show how rotation is done. use it in 3d only
+.  matrix3D(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)
+.  none                                          // default value
+
+example
+
+transform: perspective(100px) rotateX(30deg);     // It will be rotated in x-direction
+
+transform: perspective(800px) scaleZ(2) scaleX(60deg);   // we have to rotate to understand scale . look will be better if the value of perspective is large
+
+
+									//  perspective-origin
+perspective-origin: center(50%) center(50%);       // by default.  but it can be changed.  It is better to use perpective in the parent of an element. It shows
+						      the 3D look.
+
+
+									// Transform-style 
+transform-style: flat;      // by default
+transform-style: preserve-3D;   // use this in parent of the element but before that use rotate in parent
+
+
+								         // backface-visibility
+
+backface-visibility is dependant on transform
+
+watch video 60 for backface-visibility
+
+
+														// CSS Animation Tutorial
+
+	. Animation have 9 properties
+
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation						// shorthand for the above 6 properties
+animation-fill-mode
+animation-play-state
+
+
+@keyframes animation-name{
+	from { css properties }
+	to { css properties }
+		    // OR
+	0% { css properties }
+	100% { css properties }
+}
+
+
+								// USER SELECT
+To restrict users from selecting website data like users cannot copy anything from website
+
+user-select: auto;    // by default
+user-select: none;    // now text or anything else cannot be copied
+user-select: text;    // It means text can be selected
+user-select: all;     // It means text will be selected on one click in a div
+
+
+				// CSS Box-Decoration-Break
+.  Slice
+.  Clone
+
+
+				// Quotation (<q></q>)
+
+what-ever we place in <q><q> tag will appear in ""
+it we put <q>Lorem ipsum <q>Lorem ipsum</q> lorem ipsum</q> now it will appear as "Lorem ipsum 'Lorem ipsum' lorem ipsum"
+
+					CSS q
+
+q{
+	quotes: "<" ">" "'" "'";       // we use this with quotes use unicode site for quotes signs
+} 
+
+
+					// Type of selectors
+
+	. Simple selectors
+
+	    Type-selectors
+	
+		p{
+			color: red;
+		}
+
+		Class selector
+
+		.head{
+			color: green;
+		}
+
+		ID selector
+
+		#box{
+			color: blue;
+		}
+
+		Universal selector
+
+		*{
+			color: red;         //  universal selector selects all
+			the tags in the page 
+		}
+
+		#box *{
+			color: green;
+		}
+
+	. Combinator selectors
+
+		Descendant selector
+
+		#box p{
+			color: red;
+		}
+		div p span{
+			color: green;
+		}
+
+	. Direct child selector
+
+		#list > li{             // only direct child color will be 	changed to red
+			color: red;          
+		}
+
+	. Adjacent Sibling selector
+
+		div + p{				// this mean immediate tag after div. this mean the p tag after the div closing tag
+			color: red; 
+		}
+
+		ul + p{					// this mean immediate tag after ul. this mean the p tag after the ul closing tag
+			color: green;
+		}
+
+
+
+
+	. General Sibling Selectors
+
+		div ~ p{				// General selector means that all the p tags after the closing div will be selected
+			color: red;   
+		}
+		ul ~ p{					// General selector means that all the p tags after the closing div will be selected
+			color: green;
+		}
+
+	. CSS Attribute Selectors
+
+		A[attribute] - Element with specific attribute
+		input[type]
+
+		A[attribut=value] - attribute whose value is exactly same
+		input[type='password']
+
+		A[attribut^=value] - Attribute begins with the word(value).
+		img[alt^='Image']
+
+		A[attribute|=value] - Attribute begins with value OR is first in a dashed separated list
+		img[alt|='Image']  // There should be (-) sign after image in the actual alt attribute of the image.
+
+		A[attribute$=value] - attribute ends with value
+		a[href$='.png']
+
+		A[attr*=val] - value occurs anywhere in attribute
+		img[alt$='cat']
+
+		A[attr~=val] - value matches attribute in space aeperated list
+		img[alt$='cat']   // there must be space between cat and any other word before or after it
+
+	
+										// CSS pseudo classes
+
+pseudo classes always contain a colon(:)
+
+li:first-child{            // all the li's that are first child of any other element will be selected
+	color: red;      
+}
+#list li:first-child{       // inside list the first li which is child to any other element
+	color: red;
+}
+
+p:last-child{            // all the p's that are last child of any other element will be selected
+	color: red;      
+}
+
+li:nth-child(2){         // it select the 2nd li child to any element
+	color: red;         
+}
+
+li:nth-child(2n){         // it select the nth li child to any element according to the table of 2. it means n represent 0,1,2,3...
+	color: red;         
+}
+
+li:nth-child(2n+1){
+	color: red;
+}
+
+li:nth-last-child(2n+1){        // now it do the same calculation but start selecting from last
+	color: red;
+}
+
+li:nth-of-type(2){				// This will select all the li which occur at position 2 and it doesn't need to be a child.
+	color: red;
+}
+
+li:nth-of-type(2n){				// This will select all the li which occur at position 2n and it doesn't need to be a child. where n=0,1,2,3....
+	color: red;
+}
+
+li:nth-last-of-type(2n+1){
+	color: red;
+}
+
+p:nth-first-of-type(2n){
+	color: red;
+}
+
+p:only-child{     				// only that p which is the only child of any element will be selected.
+	color: red;
+}
+
+p:only-of-type{     				// only that p which is the only p child of any element will be selected. there can be other child tags but there should be only one p.
+	color: red;
+}
+
+p:last-of-type{
+	color: red;
+}
+
+p:first-of-type{
+	color: red;
+}
+
+div:empty{				// target the empty div tag
+	border: 3px solid black;
+}
+
+p:not(.test){			// the p having class test will not be selected
+	color: red;
+}
+
+p:lang(en){				// paragraph in the english language is selected. dn = german, fr = french				
+	color: red;
+}
+
+ul a:link{					// pseudo class link used on anchor tag
+	color: red;
+}
+
+ul a:hover{					// pseudo class hover used on anchor tag
+	color: red;
+}
+
+ul a:visited{				// pseudo class visited used on anchor tag
+	color: red;
+}
+
+ul a:active{
+	color: pink;
+}
+
+p:target{               // for making the internal link work we use target.
+	background: gold;
+}
+
+<ul>
+	<li><a href="#html">What is html? </a></li>     // These kind of links are called same page links or internal linking.
+	<li><a href="#css">What is css? </a></li>
+	<li><a href="#js">What is javascript? </a></li>
+</ul>
+
+<p id="html">HTML : Lorem odj3ejfbekfnekf </p>
+<p id="css">CSS : Lorem odj3ejfbekfnekf </p>
+<p id="js">javascript : Lorem odj3ejfbekfnekf </p>
+
+// The above 5 pseudo classes are related to links
+
+// The below classes are used with forms
+
+input:focus{			 // when the input is clicked it is focused.  
+	border: 3px solid red;
+}
+
+input[type='checkbox']:checked{        //  box shadow will be there when the checkbox is checked.
+	box-shadow: 0 0 0 3px red;
+}
+
+input[type='radio']:checked + label{        //  box shadow will be there when the checkbox is checked.
+	box-shadow: 0 0 0 3px red;
+}
+
+input[type='text']:disabled{				//  any input that is enabled or disabled can be selected like this 
+	border: 2px solid blue;
+}
+
+input:required{
+	border: 2px solid green;
+	background: wheat;
+}
+
+input:optional{
+	border: 2px solid green;
+	background: wheat;
+}
+
+input:in-range{              // we can define a range using min and max input field properties
+	border: 1px solid green;
+	background: wheat;
+}
+
+input:out-of-range{
+	border: 1px solid green;
+	background: pink;
+}
+
+input:read-only{			// the input on which read-only is applied will be selected
+	border: 1px solid green;
+	background: wheat;
+}
+
+input[type='email']:valid{
+	border: 1px solid green;
+	background: wheat;
+}
+
+input[type='email']:invalid{
+	border: 1px solid red;
+	background: pink;
+}
+
+input:default{				// inputs that are by default checked will be selected
+	box-shadow: 0 0 0 3px red;
+}
+
+// default is used with checkbox,radio and option.
+
+
+:root{				// used to define variables that can be used anywhere
+	--main-color: blue; 
+}
+
+
+											// Pseudo elements 
+
+p::first-letter{				// to target the first letter of paragraph
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+	background: wheat;
+}
+
+p::First-line{
+	color: red;
+	font-size: 25px;
+}
+
+p::selection{					// This will work when paragraph is selected 
+	background: red;
+	color: #fff;
+}
+
+::selection{					// This will work on any elemnt when selected
+	background: red;
+	color: #fff;
+}
+
+::placeholder{				// used to style placeholder
+	color: red;             // will be applied to all the place holders
+}
+
+.name::placeholder{				// used to style placeholder
+	color: red;             // will be applied to place holders having class name
+}
+
+
+								// After and Before pseudo selectors
+after and before pseudo selectors cannot be used with images
+
+p::before{ 					// before means first child inside p
+	content: "Hello ";
+	background: red;
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+}
+p::after{					// after means last child inside p
+	content: "World ";
+	background: green;
+	color: #fff;
+	display: block;
+	margin-top: 10px;
+}
+
+p:hover::after{					// to show something dynamically
+	content: world;
+	background: green;
+	color: #fff;
+}
+
+
+								// About CSS Grid
+.   Two dimensional grid system
+.   CSS Grid layout replaces float layout
+.   Fast and Clean Code
+.   No need of CSS frameworks
+
+
+								// CSS grid_positioning
+								
+To exchange positions of elements using grid-positioning
+The above is done in 85_naming_grid_lines
+
+
+								// css positioning using Grid area 85_naming_grid_lines
+
+use grid-area: name(eg header)     in one of the element divs
+
+in container div use grid-area-template-areas: "header header header";   if you have three columns and all of them contain header.   use (.) dot if you want to keep a column empty
+
+								// min and max content
+
+grid-template-columns: max-content 1fr 1fr 1fr;  		// column will be expande till the maximum content it can accomodate
+
+grid-template-columns: 1fr 1fr min-content;  		// column will be expande till the minimum content it can accomodate and the width will be till the width of the largest word
+
+grid-template-rows: repeat(2,min-content);			// Height will be expanded till the min content
+
+
+
+grid-template-rows: repeat(2,minmax(150px,min-content));			// Height will be expanded only when needed else it will be minimum 150px. we can use value in percentage in minmax() to make the content responsive. 
+
+
+											// Grid implicit rows and columns
+The rows and columns for which we define rows and columns it is explicit grid
+
+Grid-template-rows: ;
+Grid-template-columns: ;
+another way to find explicit grid is that it will have a solid border around it
+
+for styling implicit grids we use the following properties
+
+grid-auto-rows: 80px;    // the height will be set to 80px
+
+grid-auto-flow: row;        // default value it will add divs row wise
+grid-auto-flow: column;     // value it will add divs column wise
+
+grid-auto-columns: 0.5fr;   // it will make the width half of the width of the explicit divs 
+
+
+														// Aligning items using Grids
+grid-row: span 2;    	   // Span the item two rows a head 
+grid-column: span 3;       // Span the item three rows a head 
+
+										align properties are implemented on all the grids
+align-items: center;       // It will take every item to the center of its grid  
+align-items: end;      	   // It will take every item to the end of its grid  
+align-items: start;        // It will take every item to the start of its grid  
+align-items: stretch;      // default 
+						
+									To align only one grid (individual grid cell) we use align-self
+align-self: center;                 // it will center the item on which it is used (vertical alignment)
+
+									For horizontal alignment we use justify-items
+justify-items: start;		// take the item to left of the grid cell
+justify-items: end;			// take the item to right of the grid cell
+justify-items: center;		// take the item to center of the grid cell
+justify-items: stretch;		// default
+
+justify-self: end;          // horizontally align the individual grid cell on which it is used
+
+
+shorthand for align items and justify items
+place-items: <align-items> <justify-items>;
+
+shorthand for align self and justify self
+place-items: <align-self> <justify-self>;
+
+
+				justify-content work in horizontal spacing of elements
+justify-content: center;     // to center all the content in container
+justify-content: start;      // to take all the content to left in container
+justify-content: end;        // to take all the content to start in container
+justify-content: space-between;    // take all the space between all the items
+justify-content: space-around;    // space between the items is twice of the space at the right and left of items
+justify-content: space-evenly;    // space between the items is equal to that at the right and left
+
+
+				align-content work in vertical spacing of elements
+align-content: center;     // to center all the content in container
+align-content: start;      // to take all the content to left in container
+align-content: end;        // to take all the content to start in container
+align-content: space-between;    // take all the space between all the items
+align-content: space-around;    // space between the items is twice of the space at the right and left of items
+align-content: space-evenly;    // space between the items is equal to that at the right and left
+
+grid-auto-flow: row dense;      // to remove empty grid cells which may be created as aresult of justify-content and align-content
+
+
+grid-template-columns: repeat(auto-fill,100px);       // it will fill the empty grid cells but there will still be extra cell if no more objects left to be filled
+grid-column-end: -1;                                  // This will take the last div to the last grid cell
+
+grid-template-columns: repeat(auto-fit,100px);       // it will fill the empty grid cells but there will still be no extra cells left we can see this using developer tool bar
+
+grid-template-columns: repeat(auto-fit, minmax(150px,1fr));       // makes the grid responsive
+
+
+														
+														CSS GRID FIT-CONTENT
+grid-template-columns: fit-content(200px) fit-content(300px) 1fr;
+grid-template-rows: repeat(2,minmax(100px,mincontent));			// width increases in case if content increase only
+
+
+
+														CSS Gid order property
+order: 2;     /// will be displayed at second place
+
+															NESTED GRIDS
+we can also make a div display: grid;  which is already in agrid container which will be then nested grid
+
+															// flexBox
+flex-direction: row;    			// default
+
+flex-direction: row-reverse;    	// direction is right to left
+
+flex-direction: column;    			// direction is from top to bottom
+
+flex-direction: column-reverse;     // direction is from bottom to top
+
+flex-wrap: no-wrap;					// default value
+
+flex-wrap: wrap;					// wrap the overflowing text
+
+flex-wrap: wrap-reverse;			// wrap the overflowing text in reverse direction
+
+flex-flow: flex-direction flex-wrap;	// short-hand
+
+
+// Justify-content in flexB0x is same as css grid  Justify-content is horizontal alignment
+
+
+
+align-item is for vetical alignment
+// Align-item: stretch;              // default
+// Align-item: flex-start;           // alignment is to the top
+// Align-item: flex-end;             // alignment is to the end
+// Align-item: center;             	 // alignment is to the center
+// Align-item: center;             	 // alignment is to the center
+// Align-item: baseline;             // alignment is to the baseline of the text
+
+
+// align-content in flex also work same as that one in grid and it do vertical alignment of flex elements. Its effect can be seen if we have two rows or more in other case it work same as align-item.
+
+// for aligning one individual item vertically we use align-self
+
+// order is used to rearrange elements order of all the elements is 0 by default then we can set it element with lowest value of order will appear first.
+
+// flex grow work on items that are inside the flex container
+
+// flex-grow: 1;  distributed the space inside the flex container equally among the elements of the container
+
+// if flex-grow used inside the css of an element it will change the width of that element by that amount.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
