@@ -1,0 +1,57 @@
+body{
+    font-family: arial,helvetica;
+}
+h1{
+    padding: 0 0 0 40px;
+}
+.container{
+    background: #eee;
+    width: 600px;
+    margin: 50px auto 0;
+    padding: 10px;
+    border: 3px solid #000;
+    /* width: 200px; */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item1{
+    background: orangered;
+}
+.item2{
+    background: yellowgreen;
+}
+.item3{
+    background: mediumpurple;
+}
+.item4{
+    background: hotpink;
+}
+.item5{
+    background: royalblue;
+}
+.item6{
+    background: orchid;
+}
+.item7{
+    background: goldenrod;
+}
+.item8{
+    background: #7DCEA0;
+}
+.items{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+
+
+
+

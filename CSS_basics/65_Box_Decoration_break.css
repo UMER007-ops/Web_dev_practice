@@ -1,0 +1,17 @@
+body{
+    font-family: arial,helvetica;
+    padding-left: 30px;
+}
+span{
+    /* background: linear-gradient(red,yellow); */
+    font-size: 21px;
+    line-height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-box-decoration-break: clone;   /* default value is box-decoration-break: slice;*/
+    box-decoration-break: clone;    /* use the property like this for compatibility */ 
+    padding: 10px;
+}
+
+
+

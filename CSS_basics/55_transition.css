@@ -1,0 +1,65 @@
+body{
+    font-family: arial,helvetica;
+}
+#box{
+    width: 150px;
+    height: 150px;
+    background: pink;
+
+    /*                transition-property                    */
+    /* transition-property: width,height,background; */        /* property on which transition will be done*/
+
+        /*                transition-duration                    */
+    /* transition-duration: 2s,2s,2s; */
+
+    /* transition: width,height,background 2s,2s,2s; */  /* shorthand */
+
+    /* transition: all 2s; */        /* Another shorthand to apply transition to all the properties at once */
+
+    /*                transition-timing-function             */
+    /* transition-timing-function: ease-in; */   /* Start is slow */
+
+    /* transition-timing-function: ease-out; */   /* end is slow */
+
+    /* transition-timing-function: ease-in-out; */   /* end and start both are slow */
+
+    /* transition-timing-function: steps(4);    */ /* transition will be done in 4 steps we can add more steps*/
+
+    /* transition-timing-function: steps(4,start); */ /* we can give values as start and end in step*/
+
+    /* transition-timing-function: steps(4,end); */  /* step 4 with value end do not make a big difference in small transitions */
+
+    /* transition-timing-function: step-start; */    /* animation will be done in one step only */
+
+    /* transition-timing-function: step-end; */      /* animation will be done in one step but the difference is animation will start after 2 seconds */
+
+    /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);   */ /* animation will be done in 4 steps but smoothly */
+
+        /*                    transition-delay                   */
+    /* transition-delay: 2s;   */     /* how much delay should be there in the transition */
+
+    /*     Shorthand for the above properties */
+
+    /* transition: transition-property transition-duration transition-timing-function transition-delay; */
+    transition: all 2s linear 1s;
+}
+#box:hover{
+    width: 300px;
+    height: 300px;
+    background: orange;
+}
+
+/*  transition can be used in the following more ways */
+
+/* input:focus{ } so the transition will work when someone click on the input */
+
+/* #box:active{}   so the transition work when right button is pressed */
+
+
+
+
+
+
+
+
+

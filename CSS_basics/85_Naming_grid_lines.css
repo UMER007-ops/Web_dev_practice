@@ -1,0 +1,57 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    padding: 0 0 0 40px;
+}
+.container{
+    background: #eee;
+    width: 720px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3,[col-start] 1fr [col-end]);    /* all the 3 columns will have names col-start and col-end */
+    grid-template-rows: [header-start] 120px [header-end menu-start] 60px [menu-end box-start] 100px [box-end content-start] 400px [content-end footer-start] 50px [footer-end];
+    grid-gap: 15px;
+}
+
+.header{
+    background: orangered;
+    grid-row: header-start / header-end;
+    grid-column: col-start 1 / col-end 3;
+}
+
+.menu{
+    background: yellowgreen;
+    grid-row: menu-start / menu-end;
+    grid-column: col-start 1 / col-end 3;
+}
+.box1{
+    background: mediumpurple;
+}
+.box2{
+    background: hotpink;
+}
+
+.sidebar{
+    background: royalblue;
+    grid-row: box-start / content-end;
+}
+
+.content{
+    background: #7DCEA0;
+    grid-row: content-start / content-end;
+    grid-column: col-start 1 / col-end 2;
+}
+
+.footer{
+    background: goldenrod;
+    grid-row: footer-start / footer-end;
+    grid-column: col-start 1 / col-end 3;
+}
+
+.items{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+body{
+    font-family: arial,helvetica;
+    padding-left: 30px;
+}
+#box{
+    width: 350px;
+    height: 350px;
+    border: 30px solid black;
+    text-align: justify;
+    background: mediumpurple;
+    padding: 20px;
+    border-image-source: url(border_image.jpg);
+    border-image-slice: 150;
+    margin: 60px;
+    /* border-image-repeat: repeat; */   /* image will be repeated but image will have some flow in the corner*/
+
+    /* border-image-repeat: stretch; */  /* There will be one stretched image */
+
+    /* border-image-repeat: round; */    /* smae as repeat but no flow in corners */
+
+    border-image-repeat: repeat stretch;
+
+    border-image-outset: 50px;    /* how much the image should be out of the div */
+
+    border-image-width: 40px;     /* to change the width of the border image */
+
+                    /* shorthand for border-image properties */
+
+    /* border-image: border-image-source border-image-slice / border-image-width / border-image-outset border-image-repeat;     use a /(slash) between numeric values */
+
+                    /* we can use the above same for linear-gradient  */
+
+    border-image: linear-gradient(to right, red,yellow) 25;  /* we can use slice and width like above for gradient as well*/
+
+    /* search border-image generator on chrome and we can find a website that automatically generate border-images. */
+
+}
+
+
+

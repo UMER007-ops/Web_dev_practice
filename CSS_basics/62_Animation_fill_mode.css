@@ -1,0 +1,22 @@
+body{
+    font-family: arial,helvetica;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background: black;
+    margin-left: 20px;
+    animation: sample 2s 2s;
+    animation-fill-mode: backwards;   /* if we use forward here after completing animation it will not get to its original state default value is none we can use it in shorthand of animation as well */
+    animation-play-state: paused;
+}
+.box:hover{
+    animation-play-state: running;   /* It has two values paused and running */
+}
+@keyframes sample{
+    0%{ background-color: yellow; width: 250px;}
+    50%{ background-color: green; width: 350px;}
+    100%{ background-color: red; width: 450px;}
+}
+

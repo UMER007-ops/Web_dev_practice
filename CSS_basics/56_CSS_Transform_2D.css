@@ -1,0 +1,26 @@
+.base{
+    width: 350px;
+    height: 250px;
+    background: gray;
+    font-size: 18px;
+    text-align: center;
+    margin: 100px 0 0 100px;
+}
+#box{
+    width: 250px;
+    height: 150px;
+    background: tomato;
+    /* margin: 150px 300px; */
+    /* transform: rotate(60deg); */    /* rotation angle can also be negative*/
+    /* transform: skewX(60deg); */
+    /* transform: skewY(60deg); */
+    transform: skew(30deg, 30deg);
+    transform-origin: left top;             /* use rotate with transform origin for better understanding we can also give values in percentage it is center center by default*/
+    transform: translate(-30px, -80px);    /* we can also use translateX translateY translateZ and translate3D */
+    transform:perspective(800px) rotate(80deg) scale(1);        /* we can use a different translate-origin for scale as well perspective is used for a 3D look.*/
+    transition: transform 1s;
+}
+
+#box:hover{
+    transform: rotate(30deg) scale(2);
+}

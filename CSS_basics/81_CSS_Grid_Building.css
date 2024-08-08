@@ -1,0 +1,87 @@
+body{
+    font-family: arial,helvetica;
+}
+.container{
+    background: #eee;
+    width: 700px;
+    margin: 70px 0 0 50px;
+
+    display: grid;
+    grid-template-columns: 150px 200px auto;   /* define the number of columns and their width if we define two widths then there will be 2 cols of width 150px and 200px auto will make it three column and third column will take the width automatically*/
+
+    /* grid-template-columns: 15% 20% auto; */
+
+    /* grid-template-columns: 15% 20px auto; */
+
+    /* grid-template-columns: 1fr 1fr; */     /* fr=fraction There will be 2 equal columns */
+
+    /* grid-template-columns: repeat(2,150px) 50%; */    /* repeat makes 2 columns of 150px  */
+
+    grid-template-rows: 150px 100px 100px;   /* There will be three rows of 150px 100px and 100px */
+
+    /* grid-row-gap: 20px; */       /* for row wise gap */
+
+    /* grid-column-gap: 20px; */    /* for column-wise-gap */
+
+    /* grid-gap: 20px 15px;  */              /* This gives equal gap between rows and columns */
+
+    grid-gap: 15px 25px;                     /* This gives 15px to row and 25px in column */
+}
+.items1{
+    background-color: orangered;
+    
+    /* Replacing first and sixth div */
+
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+
+    grid-row: 2 / 3;        /* Shorthand */
+
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+
+    grid-column: 3/4;       /* Shorthand */
+    z-index: 1;             /* T make the div behind fourth visible */
+}
+.items2{
+    background-color: yellowgreen;
+}
+.items3{
+    background-color: slateblue;
+}
+.items4{
+    background-color: hotpink;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+.items5{
+    background-color: royalblue;
+}
+.items6{
+    background-color: goldenrod;
+
+     /* Replacing first and sixth div */
+    
+    /* grid-row-start: 1;
+    grid-row-end: 2; */
+
+    grid-row: 1 / 2;        /* Shorthand  we can also do spanning for rows like columns*/
+
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+
+    grid-column: 1 / 3;     /* Shorthand we can give as much columns for spanning the div's. */
+
+    /* grid-column: 1 / span 3; */   /* Span the div on 3 columns*/
+
+    /* grid-column: 1 / -1; */   /* Span the div till last column*/
+
+    /* shorthand for grid row and grid row */
+
+    /* grid-area: row-start / column-start / row-end / column-end ; */
+    /* grid-area: 2 / 3 / 3 / 4; */
+}
+
+
+
+
