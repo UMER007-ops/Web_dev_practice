@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+#box{
+    height: 300px;
+    width: 300px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+#box::before{
+    content: "❤";
+    color: rgb(143, 4, 4);
+}
+#box::after{
+    content: "👍";
+
+}
+
+button{
+    padding: 8px 20px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(39, 183, 255);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(39, 183, 255);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s ease;
+}
+
+button:hover::before{
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+
+
+
+
+
+

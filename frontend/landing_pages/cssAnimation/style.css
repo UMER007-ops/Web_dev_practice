@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: lightseagreen;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;    /* forward - keep the final properties of the animation as it is.          backward - mean to take back the initial properties of the animation */
+
+    animation-iteration-count: infinite;
+
+    /* animation-timing-function: ease-in; */   /* start slow end fast */
+
+    /* animation-timing-function: ease-out; */   /* start fast end slow */
+
+    /* animation-timing-function: linear; */   /* by default */
+
+    animation-timing-function: cubic-bezier(0,.93,.47,.43);  /* cubic-bazier - manually defined  */
+
+    animation-direction: alternate;     /* move the animation both forward and backward */
+
+}
+
+@keyframes move {
+    0%{
+        left: 0;
+        background-color: lightseagreen;
+        top: 0;
+        rotate: 0deg;
+    }
+    25%{
+        left: 85%;
+        background-color: lightgreen;
+        top: 0;
+        rotate: 360deg;
+    }
+    
+    50%{
+        left: 85%;
+        background-color: saddlebrown;
+        top: 60%;
+        rotate: 360deg;
+    }
+    75%{
+        left: 0;
+        background-color: rgb(118, 174, 174);
+        top: 60%;
+        rotate: 720deg;
+    }
+    100%{
+        left: 0;
+        background-color: paleturquoise;
+        top: 0;
+        rotate: 720deg;
+    }
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 100px;    
+    font-weight: 800px;    
+    position: relative;
+}
+
+h1::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    bottom: 0;
+    background-color: #000;
+    left: 0;
+}
+
+h1:hover{
+    cursor: pointer;
+}
+
+h1:hover::after{
+    animation-name: lineanime;
+    animation-duration: 2s;
+}
+
+
+@keyframes lineanime{
+    0%{
+        width: 0;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+

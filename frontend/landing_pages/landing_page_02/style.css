@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#left{
+    position: relative;
+    height: 100%;
+    width: 35%;
+}
+#lnav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+}
+#lnavr a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+#lnavr {
+    display: flex;
+    align-items: center;
+}
+
+#lnavr i{
+    color: royalblue;
+}
+
+#left #textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#textcenter h1{
+    font-size: 90px;
+    font-weight: 900;
+}
+
+#textcenter p{
+    opacity: 0.6;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#textcenter a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+#right{
+    height: 100%;
+    width: 65%;
+    background-color: white;
+}
+#rtop{
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+#rbottom{
+    height: 50%;
+    width: 100%;
+    background-image: url(https://media.istockphoto.com/id/2161117713/photo/juicy-oranges-in-winter-in-cyprus-3.webp?b=1&s=170667a&w=0&k=20&c=t_CPFsVTDWMJ67DLi25WIS41cEZYOPK8v7Mpf9MrNgs=);
+    background-position: center;
+    background-size: cover;
+}
+#rtopleft{
+    height: 100%;
+    width: 58%;
+    background-image: url(https://plus.unsplash.com/premium_photo-1670512181061-e24282f7ee78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8b3JhbmdlfGVufDB8fDB8fHww);
+    background-size: cover;
+    background-position: center;
+}
+#rtopright{
+    height: 100%;
+    width: 42%;
+    background-image: url(https://media.istockphoto.com/id/1493917402/photo/orange-fruit-in-basket-on-wooden-table-with-oranges-tree-in-garden.webp?b=1&s=170667a&w=0&k=20&c=MJiCx86fGe_VCMBFcvvSSzxGz6kkdg74oilqu21k8tM=);
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media(max-width: 650px){
+    #main{
+        flex-direction: column;
+    }
+    #main #left{
+        width: 100%;
+    }
+    #main #right{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

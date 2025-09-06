@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+#nav>h1{
+    font-size: 40px;
+    font-weight: 100;
+    z-index: 99;
+}
+
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav #part2 a{
+    text-decoration: none;
+    color: #222;
+    margin: 20px 20px;
+}
+
+#nav #part2 a:nth-last-child(1){
+    padding: 5px 15px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+#nav #part2 a:nth-last-child(1) #green{
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    transition: left 0.4s ease;
+}
+
+#nav #part2 a:nth-last-child(1):hover #green{ 
+    left: 0;
+}
+
+#nav #part2 a:nth-last-child(1) h5{
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+}
+
+#main>h1{
+    font-size: 5vw;
+    width: 50%;
+    text-align: center;
+    font-weight: 100;
+    text-transform: capitalize;
+    z-index: 11;
+}
+
+#main>h1::after{
+    content: "";
+    position: absolute;
+    width: 19%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    bottom: 35%;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%,0);
+}
+
+#main #img1{
+    height: 400px;
+    width: 290px;
+    position: absolute;
+    left: 6%;
+    top: 18%;
+}
+#main #img2{
+    height: 230px;
+    width: 290px;
+    position: absolute;
+    left: 57%;
+    top: 18%;
+    z-index: 10;
+    /* z-index: 0; */
+}
+#main #img3{
+    height: 250px;
+    width: 240px;
+    position: absolute;
+    left: 77.5%;
+    bottom: 10%;
+    z-index: 9;
+}
+
+#main img{
+    transition: margin 0.8s ease;
+}
+
+#main img:hover{
+    margin-top: -10px;
+}
+
+#page2{
+    height:70vh;
+    width:100%;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+#page2 h5{
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 600;
+    position: relative;
+}
+
+#page2 h5::before{
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 20%;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: springgreen;
+
+}
+
+#page2 h1{
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 70%;
+    margin: 26px 0;
+    text-align: center;
+    font-weight: 200;
+    position: relative;
+}
+
+#page2 h1::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 226px;
+    /* background-color: red; */
+    bottom: 0;
+    left: 36%;
+    top: 61.5%;
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+}
+
+#about-us{
+    display: flex;
+    align-items: center;
+}
+
+#about-us>h4{
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+#greendiv{
+    height: 40px;
+    width: 120px;
+    border: 2px solid #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-left: 20px;
+    
+}
+
+#about-us i{
+    font-size: 60px;
+    height: 70px;
+}
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
